@@ -1,0 +1,10 @@
+node{
+ stage(‘SCM Checkout’){
+ git "https://github.com/chrishantha/sample-java-programs"
+}
+Stage(‘Compile-package’){
+// get ,aven path
+Def mavHome path
+def mvnHome= tool name: ‘maven-3;, type: ‘maven’
+sh “$(mavenHome)/bin/mvn package”
+}
